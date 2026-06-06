@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: judilibre-mcp
+    runtime: node
+    plan: starter
+    buildCommand: npm install
+    startCommand: npm start
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: JUDILIBRE_BASE_URL
+        sync: false
+      - key: MCP_API_KEY
+        sync: false
